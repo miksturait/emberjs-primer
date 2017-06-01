@@ -1,0 +1,6 @@
+{
+  "name": "my-todo-list",
+  "dependencies": {
+    "blob-polyfill": "^1.0.20150320"
+  }
+}

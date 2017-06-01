@@ -1,0 +1,9 @@
+<h1>Tu cos bydzie</h1>
+
+{{todo-list/new}}
+
+<ul>
+    {{#each sortedTodos as |todo|}}
+        <li>{{todo-list/item item=todo}}</li>
+    {{/each}}
+</ul>
