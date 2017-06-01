@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     actions: {
         add() {
             let name = this.get('newTodoName');
-            this.get('store').createRecord('todo', {name, done: false}).save();
+            this.get('store').createRecord('todo', {name, done: false, createdAt: new Date()}).save();
 
             this.set('newTodoName', '');
         }

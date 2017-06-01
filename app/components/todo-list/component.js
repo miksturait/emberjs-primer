@@ -7,5 +7,11 @@ export default Ember.Component.extend({
     actions: {
         deleteTodo(todo) {
             this.todos.removeObject(todo);
-        }    }
+
+        }, 
+        didDrop(todo) {
+            todo.set('done', true).save();
+        }
+      }
+
 });

@@ -4,6 +4,6 @@
 
 <ul>
     {{#each sortedTodos as |todo|}}
-        <li>{{todo-list/item item=todo}}</li>
+        {{todo-list/item item=todo action=(action "didDrop")}}
     {{/each}}
 </ul>
