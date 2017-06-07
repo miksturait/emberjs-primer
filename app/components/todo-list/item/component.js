@@ -25,6 +25,6 @@ export default Ember.Component.extend({
   },
 
   dragEnd() {
-    this.get('action')(this.item);
+    this.get('drop')(this.item);
   }
 });
