@@ -10,7 +10,8 @@ export default Ember.Component.extend({
 
         }, 
         didDrop(todo) {
-            todo.set('done', true).save();
+            todo.set('done', true);
+            todo.save();
         }
       }
 
