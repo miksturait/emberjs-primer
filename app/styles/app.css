@@ -1,3 +1,25 @@
 li.green {
     color: #aacccf;
 }
+
+div.field {
+    width: 4em;
+    height: 4em;
+    margin: 0.1em;
+    background: lightgrey;
+}
+
+div.pone {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: black;
+}
+
+div.over {
+    background: lightyellow;
+}
+
+div.focus {
+    background: lightcoral;
+}

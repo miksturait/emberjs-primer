@@ -1,0 +1,10 @@
+{{#each model as |row y|}}
+   <div style="display: flex">
+   {{#each row as |field x|}}
+     {{#draggable-object-target action="activate" field=field}}
+        {{the-game/field field=field}}
+     {{/draggable-object-target}}
+   {{/each}}
+   </div>
+{{/each}}
+{{outlet}}
