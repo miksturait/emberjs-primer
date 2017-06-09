@@ -3,20 +3,20 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     game: Ember.inject.service('game'),
     classNames: 'field',
-    classNameBindings: ['over', 'focus'],
+    classNameBindings: ['field.over', 'field.focus'],
 
     dragOver() {
-        this.set('over', true);
+        this.set('field.over', true);
     },
 
     dragLeave() {
-        this.set('over', false)
+        this.set('field.over', false);
     },
     
     mouseEnter() {
-        this.set('focus', true)
+        this.set('field.focus', true)
     },
     mouseLeave() {
-        this.set('focus', false)
+        this.set('field.focus', false)
     }
 });

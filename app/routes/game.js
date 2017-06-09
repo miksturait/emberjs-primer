@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return [
-      [0, 1, 0, 1, 0, 1, 0, 1],
-      [1, 0, 1, 0, 1, 0, 1, 0],
+      [0, -1, 0, -1, 0, -1, 0, -1],
+      [-1, 0, -1, 0, -1, 0, -1, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -20,8 +20,17 @@ export default Ember.Route.extend({
 
   actions: {
     activate(pone, { target: { field }}) {
-      Ember.set(pone, 'status', 0);
-      Ember.set(field, 'status', 1);
+      Ember.setProperties(field, {
+        status: pone.status,
+        focus: false,
+        over: false
+      });
+
+      Ember.setProperties(pone, {
+        status: 0,
+        focus: false,
+        over: false
+      });
     }
   }
 });
