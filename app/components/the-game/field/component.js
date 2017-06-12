@@ -15,6 +15,7 @@ export default Ember.Component.extend({
     mouseEnter() {
         this.set('field.focus', true)
     },
+
     mouseLeave() {
         this.set('field.focus', false)
     }
