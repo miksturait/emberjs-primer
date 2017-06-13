@@ -7,14 +7,16 @@ export default Ember.Component.extend({
   attributeBindings: ['draggable'],
 
   itIsLong: Ember.computed('item.name', function () {
-    let length = this.get('item.name').length;
+    if(this.get('item.name')) {
+      let length = this.get('item.name').length;
 
-    if (length < 5) {
-      return 'short';
-    } else if (length < 10) {
-      return 'so-so';
-    } else {
-      return 'its-big';
+      if (length < 5) {
+        return 'short';
+      } else if (length < 10) {
+        return 'so-so';
+      } else {
+        return 'its-big';
+      }
     }
   }),
 
